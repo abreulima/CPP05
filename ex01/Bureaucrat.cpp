@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <iostream>
 #include <ostream>
 
@@ -60,6 +61,21 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
     return "Grade too low. Grades can't be lower than 150";
 };
+
+void Bureaucrat::signForm(Form &form)
+{
+    try 
+    {
+        form.beSigned(*this);
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << name << " couldn't sign " << form.getName() << " because " 
+        << e.what() << std::endl; 
+        return ;
+    }
+    std::cout << name << " signed " << form.getName(); 
+}
 
 // overload <<  when used with class Bureaucrat
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b){

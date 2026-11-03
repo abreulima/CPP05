@@ -1,4 +1,4 @@
-NAME		= main.exe
+NAME		= main
 CXX 		= c++
 CXXFLAGS 	= -Wall -Werror -Wextra -std=c++98
 SRCS		:= main.cpp Bureaucrat.cpp Form.cpp

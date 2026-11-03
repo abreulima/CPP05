@@ -7,7 +7,8 @@ int main(int argc, char *argv[])
     (void)argc;
     (void)argv;
 
-    Form extensiveForm("Extensive")
-    
-    return 0;
+    Form borringForm;
+
+    std::cout << borringForm << std::endl;
+
 }
