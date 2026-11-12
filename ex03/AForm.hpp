@@ -15,7 +15,6 @@ class AForm
     public:
         AForm(std::string name, bool isSigned, int gradeToSign, int gradeToExecute);
         AForm(); // Default Constructor
-        AForm(std::string name, int gradeToSign, int gradeToExecute); // Constructor with Args.
         AForm(const AForm& other); // Copy constructor
         AForm& operator=(const AForm& other); // = overload
         virtual ~AForm(); // desctructor

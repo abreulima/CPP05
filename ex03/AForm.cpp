@@ -22,7 +22,7 @@ AForm::AForm(
     gradeToExecute(gradeToExecute)
 {
 
-    std::cout << "Constructor" << std::endl;
+    //std::cout << "Constructor" << std::endl;
 
 	if (gradeToSign > 150 || gradeToExecute > 150)
 	{

@@ -1,6 +1,6 @@
 #include "RobotomyRequestForm.hpp"
 
-int RobotomyRequestForm::numOp = 0;
+#include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm()
 :
@@ -11,7 +11,7 @@ AForm("RobotomyRequestForm", false, 72, 45), target("RobotomyRequestFormTarget")
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
 :
-AForm(target, false, 72, 45), target(target)
+AForm("RobotomyRequestForm", false, 72, 45), target(target)
 {
 
 }
@@ -34,18 +34,15 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 
 void RobotomyRequestForm::executeFinal() const
 {
-    if (numOp % 2)
-    {
-        std::cout << "* drill noises * " << target << " has been robotomized" << std::endl;
-    }
-    else 
-    {
-        std::cout << target << " failed to have succefull robotomy operation." << std::endl;
-    }
-    numOp++;
-    
+    std::cout << "* drilling noises *" << std::endl;
+
+    if (std::rand() % 2 == 0)
+        std::cout << target << " has been robotomized successfully." << std::endl;
+    else
+        std::cout << "Robotomy failed for " << target << "." << std::endl;
+}
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-    
+
 }

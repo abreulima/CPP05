@@ -1,10 +1,12 @@
+#ifndef ROBOTOMY_REQUEST_FORM
+#define ROBOTOMY_REQUEST_FORM
+
 #include "AForm.hpp"
 
 class RobotomyRequestForm : public AForm
 {
     private:
         std::string target;
-        static int numOp;
     public:
         RobotomyRequestForm();
         RobotomyRequestForm(const RobotomyRequestForm& other);
@@ -15,3 +17,5 @@ class RobotomyRequestForm : public AForm
         void executeFinal() const;
 
 };
+
+#endif

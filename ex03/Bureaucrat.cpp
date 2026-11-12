@@ -9,7 +9,7 @@ Bureaucrat::Bureaucrat() : name("Agent Smith"), grade(150) {}
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade)
 {
-    std::cout << "Construct Called." << std::endl;
+    //std::cout << "Construct Called." << std::endl;
 
     if (grade < 1)
         throw GradeTooHighException();
@@ -53,7 +53,7 @@ void Bureaucrat::decrementGrade()
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Destructor called." << std::endl;
+    //std::cout << "Destructor called." << std::endl;
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
@@ -88,9 +88,9 @@ void Bureaucrat::signForm(AForm &form)
 }
 
 
-void Bureaucrat::executeForm(AForm &aform)
+void Bureaucrat::executeForm(AForm const &aform) const
 {
-    try 
+    try
     {
         aform.execute(*this);
         std::cout << name << " executed " << aform.getName() << std::endl;

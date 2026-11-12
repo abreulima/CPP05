@@ -6,6 +6,8 @@
 #include "RobotomyRequestForm.hpp"
 
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 int main(int argc, char *argv[])
 {
@@ -14,13 +16,15 @@ int main(int argc, char *argv[])
 
     // AForm forbidden;
 
+    std::srand(static_cast<unsigned int>(std::time(NULL)));
+
     Bureaucrat theKing("The King", 1);
     Bureaucrat theSoldier("The Soldier", 75);
     Bureaucrat theFarmer("The Farmer", 150);
 
-    PresidentialPardonForm presidentialPardonForm("Pikachu");
-    RobotomyRequestForm robotomyRequestForm("Bender");
-    ShrubberyCreationForm shrubberyCreationForm("Sponge Bob");
+    PresidentialPardonForm presidentialPardonForm("PresidentialPardonForm");
+    RobotomyRequestForm robotomyRequestForm("RobotomyRequestForm");
+    ShrubberyCreationForm shrubberyCreationForm("ShrubberyCreationForm");
 
     // Catch
     try 

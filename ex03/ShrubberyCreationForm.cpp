@@ -6,14 +6,14 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm()
 :
-AForm("DefaultForm", false, 145, 137), target("DefaultTarget")
+AForm("ShrubberyCreationForm", false, 145, 137), target("DefaultTarget")
 {
 
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 :
-AForm(target, false, 145, 137), target(target)
+AForm("ShrubberyCreationForm", false, 145, 137), target(target)
 {
 
 }
@@ -53,10 +53,10 @@ void ShrubberyCreationForm::executeFinal() const
     file << "    \\\\/ ._\\//_/__/  ,\\_//__\\\\/.  \\_//__/_";
 
     file.close();
-    
+
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-    
+
 }

@@ -48,7 +48,7 @@ void Bureaucrat::decrementGrade()
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Destructor called." << std::endl;
+    //std::cout << "Destructor called." << std::endl;
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()

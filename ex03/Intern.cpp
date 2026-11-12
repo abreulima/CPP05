@@ -29,9 +29,9 @@ Intern::~Intern()
 AForm* Intern::makeForm(const std::string form, std::string target)
 {
     std::string forms[] = {
-        "ShrubberyCreationForm",
-        "RobotomyRequestForm",
-        "PresidentialPardonForm"
+        "shrubbery creation",
+        "robotomy request",
+        "presidential pardon"
     };
 
     int i;

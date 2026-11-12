@@ -49,7 +49,7 @@ void Bureaucrat::decrementGrade()
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Destructor called." << std::endl;
+    //std::cout << "Destructor called." << std::endl;
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
@@ -64,17 +64,17 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 
 void Bureaucrat::signForm(Form &form)
 {
-    try 
+    try
     {
         form.beSigned(*this);
     }
     catch (const std::exception& e)
     {
-        std::cout << name << " couldn't sign " << form.getName() << " because " 
-        << e.what() << std::endl; 
+        std::cout << name << " couldn't sign " << form.getName() << " because "
+        << e.what() << std::endl;
         return ;
     }
-    std::cout << name << " signed " << form.getName(); 
+    std::cout << name << " signed " << form.getName() << std::endl;
 }
 
 // overload <<  when used with class Bureaucrat

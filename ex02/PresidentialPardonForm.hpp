@@ -1,3 +1,6 @@
+#ifndef PRESIDENTIAL_PARDON_FORM
+#define PRESIDENTIAL_PARDON_FORM
+
 #include "AForm.hpp"
 
 class PresidentialPardonForm : public AForm
@@ -14,3 +17,5 @@ class PresidentialPardonForm : public AForm
         void executeFinal() const;
 
 };
+
+#endif

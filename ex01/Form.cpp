@@ -10,7 +10,7 @@ Form::Form() : name("Form"), isSigned(false), gradeToSign(50),
 Form::Form(std::string name, int gradeToSign, int gradeToExecute) : name(name),
 	isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
 {
-	std::cout << "Constructor" << std::endl;
+	//std::cout << "Constructor" << std::endl;
 
 	if (gradeToSign > 150 || gradeToExecute > 150)
 	{
@@ -20,6 +20,18 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute) : name(name),
 	{
 		throw Form::GradeTooHighException();
 	}
+}
+
+Form::Form(const Form &other) : name(other.name), isSigned(other.isSigned),
+	gradeToSign(other.gradeToSign), gradeToExecute(other.gradeToExecute)
+{
+}
+
+Form &Form::operator=(const Form &other)
+{
+	if (this != &other)
+		isSigned = other.isSigned;
+	return (*this);
 }
 
 const std::string &Form::getName() const
